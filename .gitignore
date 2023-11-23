@@ -1,7 +1,4 @@
 # Keep environment variables out of version control
+not-useful-images
 card-layout-template.html
-schoolify-logo-emblem.png
-schoolify-text-logo.png
-student-login-logo.png
-employee-login-logo.png
-
+card-layout-template.css

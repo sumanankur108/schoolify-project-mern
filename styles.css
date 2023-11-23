@@ -1,0 +1,175 @@
+body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eae1f2;
+    border-width: 20px;
+}
+
+/* CSS for the navbar */
+.navbar {
+    overflow-x: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 98.7%;
+    background-color: #eae1f2;
+    padding: 5px 10px 5px 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px 5px 5px 5px;
+}
+
+/* CSS for the logo */
+.logo {
+    display: inline-block;
+}
+
+.logo img {
+    height: 65px;
+    margin-left: 620px;
+}
+
+/* CSS for the logo-text */
+.logo-text {
+    display: inline-block;
+}
+
+.logo-text img {
+    height: 40px;
+    margin-left: 2px;
+}
+
+header {
+    margin-top: 80px;
+    background-color: #42316c;
+    background-image: url(https://wallpaperaccess.com/full/5748402.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: right;
+    padding: 20px 0;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    height: 300px;
+    opacity: 88%;
+}
+
+.glow {
+    text-align: center;
+    margin-top: 90px;
+    font-size: 50px;
+    color: #eae1f2;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+from {
+text-shadow: 0 0 5px #050101, 0 0 8px #181313, 0 0 4px #612790, 0 0 4px #4d1c75, 0 0 4px #2d0540, 0 0 5px rgb(32, 15, 52), 0 0 1px #e60073;
+}
+
+to {
+text-shadow: 0 0 5px #050101, 0 0 8px #181313, 0 0 4px #2d0540, 0 0 4px #612790, 0 0 4px #050101, 0 0 5px #42316c, 0 0 1px #ff4da6;
+}
+}
+
+.text-subtitle{
+    text-align: center;
+    margin-top: -18px;
+    font-size: 25px;
+}
+
+section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+section h2{
+    margin-top: 10px;
+    color: #42316c;
+}
+
+section p{
+    margin-bottom: 35px;
+    line-height: 1.5em;
+    text-shadow:rgba(0, 0, 0, 0.1);
+    color: #42316c;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #42316c;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Added margin to separate the buttons */
+    box-shadow: inset 2px 2px 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:hover {
+    background-color: #2b1f4a;
+}
+
+/* Apply a basic style to the footer section */
+.footer-section {
+    background-color: #42316c; /* Set the background color of the footer */
+    color: #fff; /* Set the text color to white */
+    padding: 40px 0; /* Add some padding to the top and bottom of the footer */
+}
+
+/* Center the content within the footer container */
+.footer-container {
+    max-width: 1350px; /* Set a maximum width for the footer container */
+    margin-bottom: 200px;/* Center the container horizontally */
+    margin-left: 104px;
+    display: flex;
+    justify-content: space-between; /* Spread the child elements evenly */
+    flex-wrap: wrap; /* Allow the elements to wrap to the next line on small screens */
+}
+
+/* Style the footer links */
+.footer-links ul {
+    list-style: none; /* Remove the default list style */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline-block; /* Display the list items horizontally */
+    margin-right: 20px; /* Add spacing between the list items */
+}
+
+.footer-links a {
+    text-decoration: none; /* Remove underline from the links */
+    color: #fff; /* Set the text color of the links */
+    font-weight: bold; /* Make the font bold */
+}
+
+/* Style the contact information */
+.footer-contact p {
+    margin: 0; /* Remove default margin from paragraphs */
+}
+
+/* Style the social media icons */
+.footer-social img {
+    width: 30px; /* Set the width of the social media icons */
+    height: auto; /* Maintain the aspect ratio of the icons */
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* Style the bottom section of the footer */
+.footer-bottom {
+    margin-top: -140px; /* Add some space between the content and the bottom section */
+    text-align: center; /* Center-align the text in the bottom section */
+}
+
