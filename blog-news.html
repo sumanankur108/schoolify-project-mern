@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="schoolify-logo-emblem.png">
+    <title>Schoolify - Blog/News</title>
+    <style>
+       body{
+            background-color: #eae1f2;
+            font-family: 'Arial','Sans-serif';
+        }
+
+        /* CSS for the navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #d7c7e6;
+            padding: 5px 10px 5px 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(80, 18, 162, 0.4); /* Add shadow effect */
+        }
+
+        /* CSS for the logo */
+        .logo {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .logo img {
+            height: 65px;
+        }
+
+        /* CSS for the logo-text */
+        .logo-text {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .logo-text img {
+            height: 40px;
+        }
+
+        .navbar h1{
+            color: #42316c;
+            margin-left: 30%;
+        }
+
+        /* CSS for the form and article section */
+section {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 70px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 2px 2px rgba(80, 18, 162, 0.22);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #42316c; /* Text color for labels */
+}
+
+input, textarea {
+    width: 99.2%;
+    padding-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #42316c;
+    border-radius: 8px;
+    background-color: #eae1f2;
+}
+
+button {
+    background-color: #42316c; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: purple;
+}
+
+/* Existing article content styling */
+.post {
+    margin-bottom: 30px;
+}
+
+.post img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.post h2 {
+    color: #42316c; /* Text color for article titles */
+}
+
+.post p {
+    color: #555;
+}
+
+.publisher, .post-date {
+    color: #888;
+    font-size: 0.8em;
+}
+
+section {
+            margin-top: 40px;
+        }
+
+.articlez{
+    margin-top: 120px;
+    text-align: center;
+    color: #42316c;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="already-user-login-page.html.html" class="logo">
+                <img src="schoolify-logo-emblem-no-bg.png" alt="Your Website Logo">
+            </a>
+    
+            <a href="already-user-login-page.html.html" class="logo-text">
+                <img src="schoolify-text-logo-no-bg.jpg" alt="Your Website Logo">
+            </a>
+        <!--
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        -->
+        <h1>Blogs & News</h1>
+        </nav> 
+    </header>
+
+    <h2 class="articlez">Add your articles and let everyone know!</h2>
+
+    <section>
+        <!-- Form for adding new articles -->
+        <form id="articleForm">
+            <label for="articleTitle">Article Title:</label>
+            <input type="text" id="articleTitle" name="articleTitle" required>
+    
+            <label for="articleImage">Article Image URL:</label>
+            <input type="url" id="articleImage" name="articleImage" required>
+    
+            <label for="articleContent">Article Content/Description:</label>
+            <textarea id="articleContent" name="articleContent" rows="4" required></textarea>
+    
+            <label for="authorName">Your Name:</label>
+            <input type="text" id="authorName" name="authorName" required>
+    
+            <label for="articleLink">Or add a link to an article:</label>
+            <input type="url" id="articleLink" name="articleLink" onchange="updateArticleTitleLink()">
+    
+            <button type="button" onclick="addArticle()">Add Article</button>
+        </form> 
+    
+        <!-- Existing article content -->
+        <article class="post">
+            <img src="https://www.waterford.org/wp-content/uploads/2019/04/iStock-610839440.jpg" alt="Sample Image">
+            <h2 id="existingArticleTitle"><a href="https://varthana.com/school/top-10-ways-you-can-improve-the-quality-of-education-in-your-school/" style="text-decoration: none;">Improving Communication in Schools</a></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo a dui tincidunt posuere id et libero.</p>
+            <p>Suspendisse potenti. Fusce feugiat urna id elit aliquam, nec tincidunt odio vestibulum...</p>
+            <p class="publisher">Published by: Phunsukh Wangdu</p>
+            <p class="post-date">Published on: November 16, 2023</p>
+        </article>
+    
+        <!-- Add new articles dynamically using JavaScript -->
+    </section>
+    
+    <script>
+        function addArticle() {
+            // Get input values
+            const title = document.getElementById("articleTitle").value;
+            const image = document.getElementById("articleImage").value;
+            const content = document.getElementById("articleContent").value;
+            const author = document.getElementById("authorName").value;
+            const link = document.getElementById("articleLink").value;
+    
+            // Create a new article element
+            const newArticle = document.createElement("article");
+            newArticle.className = "post";
+            newArticle.innerHTML = `
+                <img src="${image}" alt="Article Image">
+                <h2><a href="${link}" target="_blank">${title}</a></h2>
+                <p>${content}</p>
+                <p class="publisher">Published by: ${author}</p>
+                <p class="post-date">Published on: ${getCurrentDate()}</p>
+            `;
+    
+            // Append the new article to the section
+            document.querySelector("section").appendChild(newArticle);
+    
+            // Clear the form inputs
+            document.getElementById("articleTitle").value = "";
+            document.getElementById("articleImage").value = "";
+            document.getElementById("articleContent").value = "";
+            document.getElementById("authorName").value = "";
+            document.getElementById("articleLink").value = "";
+        }
+    
+        function getCurrentDate() {
+            const now = new Date();
+            const options = { year: "numeric", month: "long", day: "numeric" };
+            return now.toLocaleDateString("en-US", options);
+        }
+    
+        function updateArticleTitleLink() {
+            const articleLinkInput = document.getElementById('articleLink');
+            const articleTitleInput = document.getElementById('articleTitle');
+    
+            if (articleLinkInput.value.trim() !== '') {
+                // If a link is provided, make the article title a hyperlink
+                articleTitleInput.innerHTML = `<a href="${articleLinkInput.value}" target="_blank">${articleTitleInput.value}</a>`;
+            } else {
+                // If no link is provided, reset the article title
+                articleTitleInput.innerHTML = articleTitleInput.value;
+            }
+    
+            // Add an event listener to the article title to open the link when clicked
+            articleTitleInput.addEventListener('click', function () {
+                // Check if the articleTitleInput is a link (contains an <a> tag)
+                if (articleTitleInput.querySelector('a')) {
+                    // Extract the link from the <a> tag and open it in a new tab
+                    const link = articleTitleInput.querySelector('a').getAttribute('href');
+                    window.open(link, '_blank');
+                }
+            });
+        }
+    </script>
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="schoolify-logo-emblem.png">
+    <title>Schoolify - Welcome</title>
+    <style>
+        body{
+            background-color: #eae1f2;
+        }
+
+        /* CSS for the navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #d7c7e6;
+            padding: 5px 10px 5px 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(80, 18, 162, 0.4); /* Add shadow effect */
+        }
+
+        /* CSS for the logo */
+        .logo {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .logo img {
+            height: 65px;
+            margin-left: 0px;
+        }
+
+        /* CSS for the logo-text */
+        .logo-text {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .logo-text img {
+            height: 40px;
+        }
+
+        /* CSS for the navigation links */
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            display: inline-block;
+            margin-right: 0px;
+        }
+
+        .navbar ul li a {
+            color: #42316c;
+            text-decoration:wavy;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }   
+
+        .navbar ul li a:hover{
+            color: #fff;
+        }
+
+        .text-container {
+            text-align: center; /* Center the text */
+            margin-top: 15x; /* Add 100px margin-top */
+            margin-left: 150px;
+            margin-right: 150px;
+            color: #42316c; /* Set text color to #42316c */
+            font-size: 25px;
+        }
+
+        .text-block {
+            text-align: center;
+            margin-top: 100px;
+            color: #42316c;
+            font-size: 35px;
+        }
+
+        .footercolor {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #d7c7e6; /* Change background color as needed */
+            padding:10px;
+            margin-left: -20px;
+            text-align: center; /* Center the text */
+            color: #42316c; /* Set text color to #42316c */
+            box-shadow: 0px 2px 8px 6px rgba(80, 18, 162, 0.40);
+        }
+
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home-page.html" class="logo">
+            <img src="schoolify-logo-emblem-no-bg.png" alt="Your Website Logo">
+        </a>
+        <a href="home-page.html" class="logo-text">
+            <img src="schoolify-text-logo-no-bg.jpg" alt="Your Website Logo">
+        </a>
+        <ul>
+            <li><a href="home-page.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+    </nav>   
+
+    <div class="fixed-bottom text-center text-light py-0 footercolor">
+        <span class="small"> Made with <span class="trim d-none d-sm-inline-block"> ❤️ </span>
+            by Team Valor </span>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="schoolify-logo-emblem.png">
+    <title>Schoolify - Teacher-Login</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        body{
+            background-color: #eae1f2;
+        }
+
+        /* CSS for the navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #d7c7e6;
+            padding: 5px 10px 5px 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(80, 18, 162, 0.4); /* Add shadow effect */
+        }
+
+        /* CSS for the logo */
+        .logo {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .logo img {
+            height: 65px;
+        }
+
+        /* CSS for the logo-text */
+        .logo-text {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .logo-text img {
+            height: 40px;
+        }
+
+        .text-container {
+            text-align: center; /* Center the text */
+            margin-top: 15x; /* Add 100px margin-top */
+            margin-left: 150px;
+            margin-right: 150px;
+            color: #42316c; /* Set text color to #42316c */
+            font-size: 25px;
+        }
+
+        .text-block {
+            text-align: center;
+            margin-top: 100px;
+            color: #42316c;
+            font-size: 35px;
+        }
+
+        .footercolor {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #d7c7e6; /* Change background color as needed */
+            padding:10px;
+            margin-left: -20px;
+            text-align: center; /* Center the text */
+            color: #42316c; /* Set text color to #42316c */
+            box-shadow: 0px 2px 8px 6px rgba(80, 18, 162, 0.40);
+        }
+
+.container-form {
+    width: 400px;
+    margin: 120px auto;
+    padding: 20px;
+    border: 3px solid #fff;
+    border-radius: 12px;
+    box-shadow: 0px 2px 16px 0px rgba(80, 18, 162, 0.337);
+    background-color: #d7c7e6;
+}
+
+.container-form img{
+    width: 150px;
+    height: auto;
+    margin-left: 125px;
+    margin-bottom: 5px;
+}
+
+.container-form hr{
+    color: #42316c;
+    height: 1px;
+}
+.container-form h3{
+    margin-left: 140px;
+    color: #42316c;
+    margin-bottom: 8px;
+}
+
+form {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 348px;
+    padding: 5px;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(80, 18, 162, 0.40);;    
+    margin-bottom: 10px;
+}
+
+input::-webkit-input-placeholder {
+  color: #42316c;
+  padding: 5px;
+}
+
+button {
+    margin-top: 2px;
+    margin-left: 1px;
+    margin-right: 2px;
+    background-color: #72528a;
+    color: white;
+    padding: 7px 162px;
+    border: solid 1px #72528a;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 30px;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.4);    
+}
+
+button:hover {
+  background-color: #42316c;
+  border-color: #72528a;
+}
+
+.forget{
+    margin-top: -10px;
+}
+
+.forget a{
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #42316c;
+    margin-left: 20px;
+}
+
+.forget a:hover {
+  color: blue;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="already-user-login-page.html" class="logo">
+            <img src="schoolify-logo-emblem-no-bg.png" alt="Your Website Logo">
+        </a>
+
+        <!----
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        -->
+        <a href="already-user-login-page.html" class="logo-text">
+            <img src="schoolify-text-logo-no-bg.jpg" alt="Your Website Logo">
+        </a>
+    </nav>   
+
+    <div class="container-form">
+        <hr>
+        <br>
+        <img src="schoolify-text-logo-no-bg.jpg" alt="Schoolify">
+
+        <h3>Teacher Login</h3>
+    
+    <form action="#">
+    <input type="text" id="loginID" name="loginID" placeholder="Login ID">
+    <input type="password" id="password" name="password" placeholder="Password">
+    <div class="g-recaptcha" data-sitekey="6LdqFBkpAAAAAN-88LIRr1iyipC6-ExGL434aFj8"></div>
+    <button type="submit">Login</button>
+    </form>
+
+    <div class="forget">
+        <a href="#">Forgot Password</a>
+        <a href="#">Forgot Login ID</a>
+        <a href="already-user-login-page.html">Go to Home Page</a>
+    </div>
+
+    </div>
+    
+    <div class="fixed-bottom text-center text-light py-0 footercolor">
+        <span class="small"> Made with <span class="trim d-none d-sm-inline-block"> ❤️ </span>
+            by Team Valor </span>
+    </div>
+</body>
+</html>

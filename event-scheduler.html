@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="schoolify-logo-emblem.png">
+    <title>Schoolify - Event Scheduler</title>
+    <style>
+
+        /* CSS for the navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #d7c7e6;
+            padding: 5px 10px 5px 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(80, 18, 162, 0.4); /* Add shadow effect */
+        }
+
+        /* CSS for the logo */
+        .logo {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .logo img {
+            height: 65px;
+        }
+
+        /* CSS for the logo-text */
+        .logo-text {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .logo-text img {
+            height: 40px;
+        }
+
+        .navbar h1{
+            color: #42316c;
+            margin-left: 30%;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eae1f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #event-form {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #event-form h2 {
+            background-color: #42316c;
+            color: #eae1f2;
+            padding: 15px;
+            margin: 0;
+        }
+
+        #event-form label {
+            display: block;
+            margin: 15px;
+            color: #42316c;
+        }
+
+        #event-form input,
+        #event-form textarea,
+        #event-form button {
+            width: calc(100% - 30px);
+            padding: 10px;
+            margin: 0 15px 15px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #42316c;
+            background-color: #eae1f2;
+        }
+
+        #event-form button {
+            background-color: #42316c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #event-form button:hover {
+            background-color: #1e0f37;
+        }
+
+        #event-display {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: -345px;
+            margin-left: 300px;
+        }
+
+        #event-display h2 {
+            background-color: #42316c;
+            color: #eae1f2;
+            padding: 15px;
+            margin: 0;
+        }
+
+        #events-container {
+            padding: 15px;
+            color: #42316c;
+        }
+
+        #events-form textarea{
+            border-radius: 5px;
+        }
+
+        .event-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="already-user-login-page.html.html" class="logo">
+            <img src="schoolify-logo-emblem-no-bg.png" alt="Your Website Logo">
+        </a>
+
+        <!----
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        -->
+        <a href="already-user-login-page.html.html" class="logo-text">
+            <img src="schoolify-text-logo-no-bg.jpg" alt="Your Website Logo">
+        </a>
+        <h1>Schedule an Event!</h1>
+    </nav>
+    <div id="event-form">
+        <h2>Event Details</h2>
+        <label for="event-date">Event Date:</label>
+        <input type="date" id="event-date" required>
+        <label for="event-title">Event Title:</label>
+        <input type="text" id="event-title" placeholder="Enter event title" required>
+        <label for="event-description">Event Description:</label>
+        <textarea id="event-description" placeholder="Enter event description" required></textarea>
+        <button onclick="scheduleEvent()">Schedule Event</button>
+    </div>
+
+    <div id="event-display">
+        <h2>Events</h2>
+        <div id="events-container"></div>
+    </div>
+
+    <script>
+        function scheduleEvent() {
+            const eventDate = document.getElementById("event-date").value;
+            const eventTitle = document.getElementById("event-title").value;
+            const eventDescription = document.getElementById("event-description").value;
+
+            if (eventDate && eventTitle && eventDescription) {
+                displayEvent(eventDate, eventTitle, eventDescription);
+                alert(`Event Scheduled!\nDate: ${eventDate}\nTitle: ${eventTitle}\nDescription: ${eventDescription}`);
+            } else {
+                alert("Please fill in all the details.");
+            }
+        }
+
+        function displayEvent(date, title, description) {
+            const eventsContainer = document.getElementById("events-container");
+            const eventItem = document.createElement("div");
+            eventItem.classList.add("event-item");
+            eventItem.innerHTML = `<strong>${date}</strong>: ${title}<br>${description}`;
+            eventsContainer.appendChild(eventItem);
+        }
+    </script>
+</body>
+
+</html>
