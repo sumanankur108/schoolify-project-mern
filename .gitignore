@@ -1,3 +1,7 @@
-node_modules
 # Keep environment variables out of version control
-.env 
+card-layout-template.html
+schoolify-logo-emblem.png
+schoolify-text-logo.png
+student-login-logo.png
+employee-login-logo.png
+
